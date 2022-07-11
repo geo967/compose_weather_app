@@ -1,7 +1,6 @@
-package com.example.weather_app.view
+package com.example.weather_app.presentation.view
 
 import android.content.Intent
-import androidx.compose.animation.expandVertically
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
@@ -13,7 +12,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import coil.annotation.ExperimentalCoilApi
-import com.example.weather_app.MainActivity2
+import com.example.weather_app.presentation.MainActivity2
 import com.example.weather_app.data.model.*
 import java.time.Instant
 import java.time.ZoneId

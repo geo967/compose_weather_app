@@ -1,4 +1,4 @@
-package com.example.weather_app.view
+package com.example.weather_app.presentation.view
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*

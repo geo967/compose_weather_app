@@ -1,4 +1,4 @@
-package com.example.weather_app
+package com.example.weather_app.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -11,7 +11,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import com.example.weather_app.data.model.*
 import com.example.weather_app.ui.theme.Weather_appTheme
-import com.example.weather_app.view.DetailsScreenUI
+import com.example.weather_app.presentation.view.DetailsScreenUI
 
 class MainActivity2 : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

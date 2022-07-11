@@ -1,4 +1,4 @@
-package com.example.weather_app
+package com.example.weather_app.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -13,7 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import com.example.weather_app.data.model.ResponseItem
 import com.example.weather_app.ui.theme.Weather_appTheme
-import com.example.weather_app.view.WeatherItem
+import com.example.weather_app.presentation.view.WeatherItem
 import com.example.weather_app.presentation.viewmodel.WeatherForecastViewModel
 
 class MainActivity : ComponentActivity() {

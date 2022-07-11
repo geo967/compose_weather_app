@@ -29,8 +29,8 @@ fun WeatherItem(
     val context = LocalContext.current
     Card(
         modifier = Modifier
-            .padding(8.dp, 4.dp)
-            .fillMaxWidth()
+            .padding(88.dp, 30.dp)
+            .width(300.dp)
             .height(110.dp),shape= RoundedCornerShape(8.dp),elevation=4.dp
 
     ) {

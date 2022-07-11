@@ -10,7 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import com.example.weather_app.data.model.*
-import com.example.weather_app.ui.theme.Weather_appTheme
+import com.example.weather_app.presentation.ui.theme.Weather_appTheme
 import com.example.weather_app.presentation.view.DetailsScreenUI
 
 class MainActivity2 : ComponentActivity() {
@@ -21,7 +21,7 @@ class MainActivity2 : ComponentActivity() {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    color = Color.DarkGray
+                    color = Color.Black
                 ) {
                     GetData()
                 }

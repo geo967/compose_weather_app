@@ -10,10 +10,10 @@ import com.example.weather_app.domain.usecase.ApiData
 import kotlinx.coroutines.launch
 import java.lang.Exception
 
-class WeatherForecastViewModel:ViewModel() {
-    var weatherForecastResponse:List<ResponseItem> by mutableStateOf(listOf())
+class WeatherForecastViewModel : ViewModel() {
+    var weatherForecastResponse: List<ResponseItem> by mutableStateOf(listOf())
 
-    var errorMessage:String by mutableStateOf("")
+    var errorMessage: String by mutableStateOf("")
 
     fun getWeatherForecast() {
         viewModelScope.launch {

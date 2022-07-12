@@ -19,7 +19,6 @@ interface ApiService {
                     .baseUrl("https://mocki.io/v1/")
                     .addConverterFactory(GsonConverterFactory.create())
                     .build().create(ApiService::class.java)
-
             }
             return apiService!!
         }

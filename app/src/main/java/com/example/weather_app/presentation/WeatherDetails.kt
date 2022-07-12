@@ -34,17 +34,14 @@ class MainActivity2 : ComponentActivity() {
 fun GetData() {
     val context = LocalContext.current
     val intent = (context as MainActivity2).intent
-    val responseItem = intent.getSerializableExtra("ResponseItem") as ResponseItem
     val clouds = intent.getSerializableExtra("Clouds") as Clouds
     val main = intent.getSerializableExtra("Main") as Main
     val wind = intent.getSerializableExtra("Wind") as Wind
     val precipitation = intent.getSerializableExtra("Precipitation") as Precipitation
     DetailsScreenUI(
-        responseItem = responseItem,
         main = main,
         clouds = clouds,
         wind = wind,
         precipitation = precipitation
     )
-
 }

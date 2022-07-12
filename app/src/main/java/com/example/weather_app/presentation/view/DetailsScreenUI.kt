@@ -5,15 +5,13 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.Card
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.weather_app.data.model.*
@@ -22,16 +20,11 @@ import java.time.ZoneId
 
 @Composable
 fun DetailsScreenUI(
-    responseItem: ResponseItem,
     main: Main,
     clouds: Clouds,
     wind: Wind,
     precipitation: Precipitation
 ) {
-    val dt = Instant.ofEpochSecond(responseItem.dt!!.toLong())
-        .atZone(ZoneId.systemDefault())
-        .toLocalDateTime()
-
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -39,18 +32,16 @@ fun DetailsScreenUI(
             .verticalScroll(rememberScrollState()),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.SpaceBetween
-
     ) {
         Card(
             modifier = Modifier
                 .padding(1.dp, 1.dp)
                 .fillMaxWidth()
-                .height(120.dp), shape = RoundedCornerShape(28.dp), elevation = 4.dp
-
+                .height(120.dp),
+            shape = RoundedCornerShape(28.dp),
+            elevation = 4.dp
         ) {
-            Surface(
-                color = Color.Yellow
-            ) {
+            Surface {
                 Column(
                     verticalArrangement = Arrangement.spacedBy(10.dp),
                     horizontalAlignment = Alignment.CenterHorizontally,
@@ -58,7 +49,6 @@ fun DetailsScreenUI(
                         .padding(1.dp)
                         .fillMaxSize()
                         .verticalScroll(rememberScrollState())
-
                 ) {
                     Text(
                         text = "Temperature Forecast",
@@ -98,12 +88,12 @@ fun DetailsScreenUI(
             modifier = Modifier
                 .padding(1.dp, 1.dp)
                 .fillMaxWidth()
-                .height(120.dp), shape = RoundedCornerShape(58.dp), elevation = 4.dp
+                .height(120.dp),
+            shape = RoundedCornerShape(28.dp),
+            elevation = 4.dp
 
         ) {
-            Surface(
-                color = Color.Magenta
-            ) {
+            Surface {
                 Column(
                     verticalArrangement = Arrangement.spacedBy(10.dp),
                     horizontalAlignment = Alignment.CenterHorizontally,
@@ -155,8 +145,9 @@ fun DetailsScreenUI(
             modifier = Modifier
                 .padding(1.dp, 1.dp)
                 .width(300.dp)
-                .height(120.dp), shape = RoundedCornerShape(48.dp), elevation = 4.dp
-
+                .height(120.dp),
+            shape = RoundedCornerShape(28.dp),
+            elevation = 4.dp
         ) {
             Surface(
                 color = Color.Green
@@ -198,12 +189,11 @@ fun DetailsScreenUI(
             modifier = Modifier
                 .padding(1.dp, 1.dp)
                 .width(200.dp)
-                .height(120.dp), shape = RoundedCornerShape(48.dp), elevation = 4.dp
-
+                .height(120.dp),
+            shape = RoundedCornerShape(28.dp),
+            elevation = 4.dp
         ) {
-            Surface(
-                color = Color.Red
-            ) {
+            Surface {
                 Column(
                     verticalArrangement = Arrangement.Center,
                     horizontalAlignment = Alignment.CenterHorizontally,
@@ -219,11 +209,20 @@ fun DetailsScreenUI(
                         fontWeight = FontWeight.Bold,
                         fontSize = 24.sp
                     )
-
                 }
             }
         }
-
-
     }
+}
+
+@ExperimentalMaterialApi
+@Composable
+@Preview
+fun ForecastDetailsPreview() {
+    DetailsScreenUI(
+        main = Main(8.08,1034.848,4.63,1029.908,78.61),
+        clouds = Clouds(42),
+        wind = Wind(4.254,320.074),
+        precipitation = Precipitation(0,0,0,0)
+    )
 }

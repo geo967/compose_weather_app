@@ -1,5 +1,6 @@
 package com.example.weather_app.domain.di
 
+import com.example.weather_app.data.network.ApiService
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit
@@ -11,8 +12,8 @@ class RetroModule {
 
     @Singleton
     @Provides
-    fun providesAPI(retrofit: Retrofit): RetroServiceInterface {
-        return retrofit.create(RetroServiceInterface::class.java)
+    fun providesAPI(retrofit: Retrofit): ApiService {
+        return retrofit.create(ApiService::class.java)
     }
 
     @Singleton

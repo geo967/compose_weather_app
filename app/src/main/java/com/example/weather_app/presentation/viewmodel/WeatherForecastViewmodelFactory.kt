@@ -1,4 +1,3 @@
-/*
 
 package com.example.weather_app.presentation.viewmodel
 
@@ -14,4 +13,3 @@ class WeatherForecastViewModelFactory @Inject constructor(
         return WeatherForecastViewModel(repo) as T
     }
 }
-*/

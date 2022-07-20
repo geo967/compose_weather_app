@@ -1,27 +1,20 @@
 package com.example.weather_app.presentation.view
 
 import android.content.Intent
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.paint
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.semantics.Role.Companion.Image
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.annotation.ExperimentalCoilApi
-import com.example.weather_app.R
+import com.example.weather_app.data.model.ResponseItem
 import com.example.weather_app.presentation.MainActivity2
-import com.example.weather_app.data.model.*
-import com.google.gson.annotations.SerializedName
-import java.io.Serializable
 import java.time.Instant
 import java.time.ZoneId
 
@@ -92,4 +85,3 @@ fun ExpandableCardPreview() {
         responseItem= ResponseItem(dt = 1546300800)
     )
 }
-

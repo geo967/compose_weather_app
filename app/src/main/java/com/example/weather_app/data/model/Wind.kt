@@ -10,4 +10,5 @@ data class Wind(
 
     @field:SerializedName("speed")
     val speed: Double? = null
+
 ): Serializable

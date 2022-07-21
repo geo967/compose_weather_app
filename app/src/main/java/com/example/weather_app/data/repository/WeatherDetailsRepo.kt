@@ -9,6 +9,6 @@ class WeatherDetailsRepo @Inject constructor(
     private val apiService: ApiService
 ) {
     suspend fun getWeatherForecastData(): List<ResponseItem> {
-        return apiService.getWeatherForecastList()
+        return apiService.getWeatherForecastResponse()
     }
 }

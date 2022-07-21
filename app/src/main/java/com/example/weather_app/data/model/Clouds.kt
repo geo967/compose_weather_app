@@ -7,4 +7,5 @@ data class Clouds(
 
     @field:SerializedName("all")
     val all: Int? = null?:0
+
 ): Serializable

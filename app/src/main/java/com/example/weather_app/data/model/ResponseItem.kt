@@ -19,4 +19,5 @@ data class ResponseItem(
 
     @field:SerializedName("wind")
     val wind: Wind? = null
+
 ): Serializable

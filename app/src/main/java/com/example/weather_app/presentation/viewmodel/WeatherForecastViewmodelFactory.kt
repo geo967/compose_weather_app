@@ -9,7 +9,9 @@ import javax.inject.Inject
 class WeatherForecastViewModelFactory @Inject constructor(
     private val repo:WeatherDetailsRepo
 ): ViewModelProvider.Factory{
+
        override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return WeatherForecastViewModel(repo) as T
+
     }
 }

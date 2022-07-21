@@ -19,4 +19,5 @@ data class Main(
 
     @field:SerializedName("pressure")
     val pressure: Double? = null
+
 ): Serializable

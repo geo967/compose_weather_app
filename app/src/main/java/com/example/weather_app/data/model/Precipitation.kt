@@ -19,6 +19,7 @@ data class Precipitation(
 
     @field:SerializedName("accumulated")
     val accumulated: Int? = null
+
 ):Serializable
 
 
